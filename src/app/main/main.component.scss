@@ -1,0 +1,23 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .example-sidenav{
+      padding:40px 20px 0 10px;
+      text-align: left;
+      background-color: #425563;
+      color: #ffcd00;
+  }
+
+  .menuitem{
+      cursor: pointer;
+      font-weight: 900;
+  }
+
+  .menuitem:hover{
+      color:#fff0b3;
+  }

@@ -1,0 +1,22 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p class="menuitem">Modifica</p>
+      <p class="menuitem">Salva</p>
+      <p class="menuitem">Stampa</p>
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+        <p>
+            <mat-toolbar color="primary">
+                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" (click)="drawer.toggle(); showFiller=!showFiller">{{ !showFiller ? 'menu': 'close'}}</mat-icon>
+                    </button>
+                <span><strong>Test App</strong></span>
+                <span style="position: absolute;right:30px; font-size: 15px;font-weight: 900;text-align: right; cursor: pointer;" (click)="openDialog()" *ngIf="!showFiller">{{nome}}</span>
+            </mat-toolbar>
+        </p>
+        <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+    </div>
+  
+  </mat-drawer-container>
+
