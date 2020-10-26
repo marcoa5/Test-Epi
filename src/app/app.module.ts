@@ -14,12 +14,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { Page1Component } from './pages/page1/page1.component';
+import { Page2Component } from './pages/page2/page2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     DialogComponent,
+    Page1Component,
+    Page2Component,
   ],
   imports: [
     MsalModule.forRoot({

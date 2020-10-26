@@ -1,7 +1,10 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MsalService } from '@azure/msal-angular';
 import {MatDialog} from '@angular/material/dialog';
-import { DialogComponent } from '../dialog/dialog.component'
+import { DialogComponent } from '../dialog/dialog.component';
+import { Router } from '@angular/router';
+import { MAT_DRAWER_CONTAINER } from '@angular/material/sidenav/drawer';
+import { $ } from 'protractor';
 
 
 @Component({
@@ -15,7 +18,7 @@ export class MainComponent implements OnInit {
   nome;
   env;
   ch:boolean=false;
-  constructor(private authService: MsalService,public dialog: MatDialog) { }
+  constructor(private authService: MsalService,public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
     this.profile = this.authService.getAccount().userName;
@@ -29,6 +32,14 @@ export class MainComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(DialogComponent);
-    }
+  }
+
+  home(){
+    this.router.navigate(['']);
+  }
+  modifica(){
+    this.router.navigate(['Modifica']);
+  }
+  
 }
 
