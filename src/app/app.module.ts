@@ -16,6 +16,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { Page1Component } from './pages/page1/page1.component';
 import { Page2Component } from './pages/page2/page2.component';
+import { Page3Component } from './pages/page3/page3.component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { Page2Component } from './pages/page2/page2.component';
     DialogComponent,
     Page1Component,
     Page2Component,
+    Page3Component,
   ],
   imports: [
     MsalModule.forRoot({
@@ -31,7 +34,7 @@ import { Page2Component } from './pages/page2/page2.component';
       clientId:'bdea7110-6cd8-4cc4-a70a-9f0bb9ca1e92'
     }
     }),
-    BrowserModule, MatDialogModule,
+    BrowserModule, MatDialogModule, MatDividerModule,
     AppRoutingModule, MatSidenavModule, MatButtonModule, BrowserAnimationsModule, MatToolbarModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), MatIconModule,
   ],
   providers: [  ],

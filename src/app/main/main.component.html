@@ -1,8 +1,10 @@
 <mat-drawer-container class="example-container" autosize>
     <mat-drawer #drawer class="example-sidenav" mode="side">
-      <p class="menuitem" (click)="drawer.toggle(); showFiller=!showFiller; home()">Home</p>
-      <p class="menuitem" (click)="drawer.toggle(); showFiller=!showFiller; modifica()">Modifica</p>
-      <p class="menuitem">Stampa</p>
+      <p class="menuitem" (click)="drawer.toggle(); showFiller=!showFiller; page1()">Page 1</p>
+      <mat-divider></mat-divider><br>
+      <p class="menuitem" (click)="drawer.toggle(); showFiller=!showFiller; page2()">Page 2</p>
+      <mat-divider></mat-divider><br>
+      <p class="menuitem" (click)="drawer.toggle(); showFiller=!showFiller; page3()">Page 3</p>
     </mat-drawer>
   
     <div class="example-sidenav-content">

@@ -34,11 +34,14 @@ export class MainComponent implements OnInit {
     this.dialog.open(DialogComponent);
   }
 
-  home(){
-    this.router.navigate(['']);
+  page1(){
+    this.router.navigate(['page1']);
   }
-  modifica(){
-    this.router.navigate(['Modifica']);
+  page2(){
+    this.router.navigate(['page2']);
+  }
+  page3(){
+    this.router.navigate(['page3'])
   }
   
 }
