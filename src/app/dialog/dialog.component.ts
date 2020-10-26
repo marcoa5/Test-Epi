@@ -8,10 +8,12 @@ import { MsalService } from '@azure/msal-angular';
   styleUrls: ['./dialog.component.scss']
 })
 export class DialogComponent implements OnInit {
-
+  nome:string;
   constructor(public dialog: MatDialog,private authService: MsalService) { }
 
   ngOnInit(): void {
+    let a = this.authService.getAccount().name
+    this.nome = a.substring(0, a.indexOf(" "));
   }
 
   chiudi(){
