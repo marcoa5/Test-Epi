@@ -7,9 +7,11 @@ import { Page2Component } from './pages/page2/page2.component';
 import { Page3Component } from './pages/page3/page3.component';
 
 const routes: Routes = [
-    {path: '', component: Page1Component, canActivate: [MsalGuard],},
     {
-      path:'page1', component: Page1Component, canActivate:[MsalGuard]
+      path: '', component: Page1Component, canActivate: [MsalGuard]
+    },
+    {
+      path: 'page1', component: Page1Component, canActivate:[MsalGuard]
     },
     {
       path: 'page2', component: Page2Component, canActivate: [MsalGuard]
