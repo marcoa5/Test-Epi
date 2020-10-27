@@ -30,3 +30,19 @@ $Epi-theme: mat-light-theme($Epi-primary, $Epi-accent, $Epi-warn);
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Colors
+$bg-color:white;
+$dot-color: #e0e0e0;
+
+// Dimensions
+$dot-size: 1px;
+$dot-space: 3px;
+
+body {
+	background:
+		linear-gradient(90deg, $bg-color ($dot-space - $dot-size), transparent 1%) center,
+		linear-gradient($bg-color ($dot-space - $dot-size), transparent 1%) center,
+		$dot-color;
+	background-size: $dot-space $dot-space;
+}
